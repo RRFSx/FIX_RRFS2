@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH --partition=service
+#SBATCH -t 07:00:00
+#SBATCH -A nrtrr
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -J savefix2hpss
+#SBATCH --chdir=.
+#SBATCH -e output.hpss
+#SBATCH -o output.hpss
+#######
+### usage: sbatch save2hpss.job
+#######
+
+module load hpss
+
+set -x
+dst="/BMC/rtrr/5year/FIX_RRFS2"
+timestamp=$(date -u +"%Y%m%d_%H%M%S")
+startime=$timestamp
+
+htar -cvf $dst/FIX_RRFS2_${timestamp}z.tar bumploc crtm graphinfo jedi meshes modulefiles mpassit physics save2hpss.job static_bec stream_list upp
+
+set +x
+endtime=$(date -u +"%Y%m%d_%H%M%S")
+echo "start at $startime" 
+echo "end at $endtime" 
