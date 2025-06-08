@@ -1,0 +1,8 @@
+
+conus3km.invariant.nc_L65  -> conus3km.invariant.nc_L65_RAP
+conus3km.invariant.nc_L62  -> conus3km.invariant.nc_L62_RAP
+conus3km.invariant.nc_L60  -> conus3km.invariant.nc_L60_RAP  
+
+conus12km.invariant.nc_L65 -> conus12km.invariant.nc_L65_GFS 
+conus12km.invariant.nc_L62 -> conus12km.invariant.nc_L62_GFS 
+conus12km.invariant.nc_L60 -> conus12km.invariant.nc_L60_GFS 
