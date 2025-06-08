@@ -1,0 +1,313 @@
+----------------------------------------------------------------------
+Beginning MPAS-atmosphere Output Log File for task       0 of     120
+    Opened at 2024/06/24 18:48:15
+----------------------------------------------------------------------
+
+ 
+ Using default double-precision reals
+ 
+ Reading namelist from file ./namelist.atmosphere
+ 
+ ----- Setting up physics suite 'mesoscale_reference' -----
+ 
+     config_microp_scheme       = mp_wsm6
+     config_convection_scheme   = cu_ntiedtke
+     config_pbl_scheme          = bl_ysu
+     config_gwdo_scheme         = bl_ysu_gwdo
+     config_radt_cld_scheme     = cld_fraction
+     config_radt_lw_scheme      = rrtmg_lw
+     config_radt_sw_scheme      = rrtmg_sw
+     config_sfclayer_scheme     = sf_monin_obukhov
+     config_lsm_scheme          = noah
+ 
+ ----- Setting up package variables -----
+ 
+     mp_kessler_in           = F
+     mp_thompson_in          = F
+     mp_wsm6_in              = T
+     cu_grell_freitas_in     = F
+     cu_kain_fritsch_in      = F
+     cu_tiedtke_in           = T
+     bl_mynn_in              = F
+     bl_ysu_in               = T
+ 
+ Reading streams configuration from file ./streams.atmosphere
+ Found mesh stream with filename template Data/bkg0.nc
+ Using io_type Parallel-NetCDF (CDF-5, large variable support) for mesh stream
+  ** Attempting to bootstrap MPAS framework using stream: static
+ Bootstrapping framework with mesh fields from input file 'Data/bkg0.nc'
+  * Requested field rainprod is deactivated due to packages, or is a scratch variable.
+  * Requested field evapprod is deactivated due to packages, or is a scratch variable.
+  * Requested field nt_c is deactivated due to packages, or is a scratch variable.
+  * Requested field mu_c is deactivated due to packages, or is a scratch variable.
+  * Requested field nca is deactivated due to packages, or is a scratch variable.
+  * Requested field cubot is deactivated due to packages, or is a scratch variable.
+  * Requested field cutop is deactivated due to packages, or is a scratch variable.
+  * Requested field w0avg is deactivated due to packages, or is a scratch variable.
+  * Requested field qcg is deactivated due to packages, or is a scratch variable.
+  * Requested field sh3d is deactivated due to packages, or is a scratch variable.
+  * Requested field qke is deactivated due to packages, or is a scratch variable.
+  * Requested field qke_adv is deactivated due to packages, or is a scratch variable.
+  * Requested field cov is deactivated due to packages, or is a scratch variable.
+  * Requested field qsq is deactivated due to packages, or is a scratch variable.
+  * Requested field tsq is deactivated due to packages, or is a scratch variable.
+  * Requested field tke_pbl is deactivated due to packages, or is a scratch variable.
+  * Requested field el_pbl is deactivated due to packages, or is a scratch variable.
+  * Requested field ch is deactivated due to packages, or is a scratch variable.
+  * Requested field k22_shallow is deactivated due to packages, or is a scratch variable.
+  * Requested field kbcon_shallow is deactivated due to packages, or is a scratch variable.
+  * Requested field ktop_shallow is deactivated due to packages, or is a scratch variable.
+  * Requested field ktop_deep is deactivated due to packages, or is a scratch variable.
+  * Requested field xmb_total is deactivated due to packages, or is a scratch variable.
+  * Requested field xmb_shallow is deactivated due to packages, or is a scratch variable.
+  * Requested field qc_cu is deactivated due to packages, or is a scratch variable.
+  * Requested field qi_cu is deactivated due to packages, or is a scratch variable.
+  * Requested field rqrcuten is deactivated due to packages, or is a scratch variable.
+  * Requested field rqscuten is deactivated due to packages, or is a scratch variable.
+  * Requested field rniblten is deactivated due to packages, or is a scratch variable.
+  * Requested field scalars_amb is deactivated due to packages, or is a scratch variable.
+  * Requested field u_amb is deactivated due to packages, or is a scratch variable.
+  * Requested field rho_amb is deactivated due to packages, or is a scratch variable.
+  * Requested field theta_amb is deactivated due to packages, or is a scratch variable.
+ 
+Parsing run-time I/O configuration from ./streams.atmosphere ...
+ 
+ -----  found immutable stream "static" in ./streams.atmosphere  -----
+         filename template:  Data/bkg0.nc
+         filename interval:  none
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         input alarm:        initial_only
+ 
+ -----  found immutable stream "input" in ./streams.atmosphere  -----
+         filename template:  Data/bkg.nc
+         filename interval:  none
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         input alarm:        initial_only
+ 
+ -----  found immutable stream "da_state" in ./streams.atmosphere  -----
+         filename template:  Data/bkg2.nc
+         filename interval:  none
+         clobber mode:       overwrite
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          output
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         output alarm:       none
+ 
+ -----  found immutable stream "lbc_in" in ./streams.atmosphere  -----
+         filename template:  lbc.$Y-$M-$D_$h.$m.$s.nc
+         filename interval:  1:00:00
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input
+         reference time:     initial_time
+         record interval:    -
+         input alarm:        1:00:00
+         package:            limited_area
+
+ 
+ -----  found stream "background" in ./streams.atmosphere  -----
+         filename template:  background.nc
+         filename interval:  none
+         clobber mode:       overwrite
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input, output
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         input alarm:        none
+         output alarm:       none
+ 
+ -----  found stream "analysis" in ./streams.atmosphere  -----
+         filename template:  analysis.nc
+         filename interval:  none
+         clobber mode:       overwrite
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          output
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         output alarm:       none
+ 
+ -----  found stream "ensemble" in ./streams.atmosphere  -----
+         filename template:  ensemble.nc
+         filename interval:  none
+         clobber mode:       overwrite
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input, output
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         input alarm:        none
+         output alarm:       none
+ 
+ -----  found stream "control" in ./streams.atmosphere  -----
+         filename template:  control.nc
+         filename interval:  none
+         clobber mode:       overwrite
+         I/O type:           Parallel-NetCDF (CDF-5, large variable support)
+         direction:          input, output
+         reference time:     initial_time
+         record interval:    -
+         real precision:     4 bytes
+         input alarm:        none
+         output alarm:       none
+ 
+ -----  found stream "output" in ./streams.atmosphere  -----
+         filename template:  output.nc
+         filename interval:  none
+         direction:          none
+         reference time:     initial_time
+         record interval:    -
+ 
+ -----  found stream "diagnostics" in ./streams.atmosphere  -----
+         filename template:  diagnostics.nc
+         filename interval:  none
+         direction:          none
+         reference time:     initial_time
+         record interval:    -
+ 
+ ----- done parsing run-time I/O from ./streams.atmosphere -----
+
+  ** Validating streams
+ 
+ 
+ Reading dimensions from input streams ...
+ 
+ ----- reading dimensions from stream 'static' using file Data/bkg0.nc
+        nCells = 225636
+        nEdges = 678784
+        nVertices = 453149
+        TWO = 2
+        maxEdges = 6
+        maxEdges2 = 12
+        R3 = 3
+        vertexDegree = 3
+        nVertLevelsP1 = 56
+        nVertLevels = 55
+        FIFTEEN = 15
+        nMonths = 12
+ 
+ ----- reading dimensions from stream 'input' using file Data/bkg.nc
+        nVertLevels = 55
+        nCells = 225636
+        nEdges = 678784
+        nVertLevelsP1 = 56
+        nSoilLevels = 4
+ 
+   *** unable to open input file restart.2024-05-27_00.00.00.nc for stream 'restart'
+ 
+   *** unable to open input file x1.40962.AmB.2024-05-27_00.00.00.nc for stream 'iau'
+ 
+   *** unable to open input file lbc.2024-05-27_00.00.00.nc for stream 'lbc_in'
+ 
+ ----- reading dimensions from stream 'da_state' using file Data/bkg2.nc
+        nVertLevels = 55
+        nCells = 225636
+        nEdges = 678784
+        nVertLevelsP1 = 56
+        nSoilLevels = 4
+ 
+   *** unable to open input file background.nc for stream 'background'
+ 
+   *** unable to open input file ensemble.nc for stream 'ensemble'
+ 
+   *** unable to open input file control.nc for stream 'control'
+ 
+ ----- done reading dimensions from input streams -----
+ 
+ 
+ Processing decomposed dimensions ...
+ 
+  ----- done processing decomposed dimensions -----
+ 
+ 
+ Assigning remaining dimensions from definitions in Registry.xml ...
+        THREE = 3
+        TWENTYONE = 21
+        nLags = 140 (input_soil_temperature_lag)
+        nOznLevels = 59 (noznlev)
+        nAerLevels = 29 (naerlev)
+        cam_dim1 = 4 (camdim1)
+        nVertLevelsP2 = 57
+        nIsoLevelsT = 5
+        nIsoLevelsZ = 13
+ 
+  ----- done assigning dimensions from Registry.xml -----
+ 
+ 
+WARNING: Variable cldfrac not in input file.
+WARNING: Variable uReconstructZonal not in input file.
+WARNING: Variable uReconstructMeridional not in input file.
+WARNING: Variable sfc_albedo_seaice not in input file.
+WARNING: Variable precipw not in input file.
+WARNING: Variable ter not in input file.
+ *********************************
+ Done reading the IAU input stream
+ *********************************
+ 
+ Checking consistency of limited-area settings...
+  - config_apply_lbcs = T
+  - Maximum value in bdyMaskCell = 7
+  - Input interval for 'lbc_in' stream = '0000000000_001:000:000'
+  ----- done checking limited-area settings -----
+ 
+      DT_RADTLW   =1800.00000000000
+      DT_RADTSW   =1800.00000000000
+      DT_CU       =60.0000000000000
+      DT_PBL      =60.0000000000000
+      IMS =1   IME =1911
+      JMS =1   JME =1
+      KMS =1   KME =56
+      IDS =1   IDE =1912
+      JDS =1   JDE =2
+      KDS =1   KDE =56
+      ITS =1   ITE =1911
+      JTS =1   JTE =1
+      KTS =1   KTE =55
+ --- specifics on cloud microphysics option microp_scheme = mp_wsm6
+ --- dt_microp = 60.0000000000000
+ --- n_microp  = 1
+ --- has_reqc  = 0
+ --- has_reqi  = 0
+ --- has_reqs  = 0
+     skipping over lutype = OLD
+     skipping over lutype = USGS
+     landuse type = MODIFIED_IGBP_MODIS_NOAH found          61  categories           2  seasons
+ 
+ --- initialize NOAH LSM tables
+     skipping over lutype = USGS
+     landuse type = MODIFIED_IGBP_MODIS_NOAH found          20  categories
+     end read VEGPARM.TBL
+     input soil texture classification = STAS
+     soil texture classification = STAS found          19  categories
+     end read SOILPARM.TBL
+     end read GENPARM.TBL
+ --- end initialize NOAH LSM tables
+ 
+ min/max of meshScalingDel2 = 1.00000000000000 1.18920711500272
+ min/max of meshScalingDel4 = 1.00000000000000 1.68179283050743
+WARNING: Variable cldfrac not in input file.
+WARNING: Variable uReconstructZonal not in input file.
+WARNING: Variable uReconstructMeridional not in input file.
+ 
+ ********************************************************
+    Finished running the atmosphere core
+ ********************************************************
+ 
+ -----------------------------------------
+ Total log messages printed:
+    Output messages =                  276
+    Warning messages =                   9
+    Error messages =                     0
+    Critical error messages =            0
+ -----------------------------------------
+ Logging complete.  Closing file at 2024/06/24 18:58:44
