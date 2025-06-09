@@ -3,9 +3,8 @@ basedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 source ${basedir}/detect_machine.sh
 cd ${basedir}/..
 rm -f output.hpss
+rm -rf _tmp_tar_
 
-set -x
-pwd
 case ${MACHINE} in
   orion|hercules)
     echo "No HPSS access on orion/hercules"
@@ -23,6 +22,11 @@ case ${MACHINE} in
     module load hpss
 esac
 
-sbatch ush/save2hpss.${MACHINE}
+set -x
+pwd
+sbatch ush/job_hpss.${MACHINE}
+set +x
 
-echo "hsi ls -l /BMC/rtrr/5year/FIX_RRFS2"
+echo "check the archived tarball at:"
+echo "  hsi ls -l /BMC/rtrr/5year/FIX_RRFS2"
+echo "Be sure to remove the _tmp_tar_ directory when the backup is done"

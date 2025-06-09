@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=service
 #SBATCH -t 07:00:00
-#SBATCH -A nrtrr
+#SBATCH -A rtrr
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -J savefix2hpss
@@ -19,9 +19,14 @@ dst="/BMC/rtrr/5year/FIX_RRFS2"
 timestamp=$(date -u +"%Y%m%d_%H%M%S")
 startime=$timestamp
 
-htar -cvf $dst/FIX_RRFS2_${timestamp}z.tar bumploc crtm graphinfo jedi meshes modulefiles mpassit physics save2hpss.job static_bec stream_list upp
+tmpdir="_tmp_tar_"
+tarfile=mega_${timestamp}z.tar
+
+mkdir -p $tmpdir
+tar -cvf $tmpdir/$tarfile .mega/*
+hsi put $tmpdir/$tarfile : $tmpdir/$tarfile
 
 set +x
 endtime=$(date -u +"%Y%m%d_%H%M%S")
-echo "start at $startime" 
-echo "end at $endtime" 
+echo "start at $startime"
+echo "end at $endtime"
