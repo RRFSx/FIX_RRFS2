@@ -24,7 +24,7 @@ tarfile=mega_${timestamp}z.tar
 
 mkdir -p $tmpdir
 tar -cvf $tmpdir/$tarfile .mega/*
-hsi put $tmpdir/$tarfile : $tmpdir/$tarfile
+hsi put $tmpdir/$tarfile : $dst/$tarfile
 
 set +x
 endtime=$(date -u +"%Y%m%d_%H%M%S")
