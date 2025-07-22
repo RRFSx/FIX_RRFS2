@@ -23,6 +23,9 @@ source ${ushdir}/detect_machine.sh
 set -x
 basedir=$( dirname ${ushdir} )
 logname=$(logname)
+if [[ -z "${logname}" ]]; then # gaea DTN has no login name
+   logname=${USER}
+fi
 cmd="rsync -avr --ignore-existing"
 
 declare -A mappings  # Declare an associative array
