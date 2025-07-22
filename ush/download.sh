@@ -46,4 +46,4 @@ DTN["hera"]="dtn-hera.fairmont.rdhpcs.noaa.gov"
 DTN["ursa"]="dtn-ursa.fairmont.rdhpcs.noaa.gov"
 DTN["jet"]="dtn-jet.boulder.rdhpcs.noaa.gov"
 
-${cmd} ${logname}@${DTN[${HPC}]}:${locations[${HPC}]}/.mega/ ${basedir}/.mega
+${cmd} ${mappings[${logname}]}@${DTN[${HPC}]}:${locations[${HPC}]}/.mega/ ${basedir}/.mega
