@@ -5,4 +5,4 @@ This enables using the GIT technology to track every pieces of the RRFSv2 system
 # !! NOTE !!
 Don't make any changes to FIX_RRFS2 if you don't know how to use `git-mega`.
 
-Contact Guoqing.Ge, Samuel.Degelia and Junjun.Hu for any questions.
+Contact Guoqing.Ge, Samuel.Degelia, or Junjun.Hu for any questions.
