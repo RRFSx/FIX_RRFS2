@@ -1,13 +1,12 @@
 #!/bin/bash
 if [[ $# < 1 ]]; then
-   echo "$0 <jet|hera|ursa>"
+   echo "$0 <jet|ursa>"
    exit
 fi
 
 HPC=$1
 declare -A locations  # Declare an associative array
-locations["hera"]="/scratch4/BMC/rtrr/FIX_RRFS2"
-locations["ursa"]=${locations["hera"]}
+locations["ursa"]="/scratch4/BMC/rtrr/FIX_RRFS2"
 locations["jet"]="/lfs5/BMC/nrtrr/FIX_RRFS2"
 ### NOTE: gaea does not have a DTN for outgoing transfer
 ### orion/hercules: /work/noaa/zrtrr/FIX_RRFS2
@@ -34,6 +33,7 @@ mappings["gge"]="Guoqing.Ge"
 mappings["Samuel.Degelia"]="Samuel.Degelia"
 mappings["sdegelia"]="Samuel.Degelia"
 mappings["Junjun.Hu"]="Junjun.Hu"
+mappings["jjhu"]="Junjun.Hu"
 # the following are backups
 #mappings["Ming.Hu"]="Ming.Hu"
 #mappings["minghu"]="Ming.Hu"
@@ -42,7 +42,7 @@ mappings["Junjun.Hu"]="Junjun.Hu"
 
 
 declare -A DTN  # Declare an associative array
-DTN["hera"]="dtn-hera.fairmont.rdhpcs.noaa.gov"
+#DTN["hera"]="dtn-hera.fairmont.rdhpcs.noaa.gov"
 DTN["ursa"]="dtn-ursa.fairmont.rdhpcs.noaa.gov"
 DTN["jet"]="dtn-jet.boulder.rdhpcs.noaa.gov"
 
