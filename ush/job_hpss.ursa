@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --partition=service
+#SBATCH --partition=u1-service
 #SBATCH -t 08:00:00
 #SBATCH -A rtrr
 #SBATCH -N 1
