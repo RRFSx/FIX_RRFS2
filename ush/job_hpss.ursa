@@ -9,7 +9,7 @@
 #SBATCH -e output.hpss
 #SBATCH -o output.hpss
 
-module load hpss
+# module load hpss # ursa does not need to load hpss module
 
 set -x
 dst="/BMC/rtrr/5year/FIX_RRFS2"
