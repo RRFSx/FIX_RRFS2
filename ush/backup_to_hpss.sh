@@ -18,8 +18,11 @@ case ${MACHINE} in
     echo "currently, role.rrfsfix cannot access HPSS from gaea"
     exit 1
     ;;
+  ursa)
+    ;;
   *)
     module load hpss
+    ;;
 esac
 
 set -x
@@ -30,3 +33,4 @@ set +x
 echo "check the archived tarball at:"
 echo "  hsi ls -l /BMC/rtrr/5year/FIX_RRFS2"
 echo "Be sure to remove the _tmp_tar_ directory when the backup is done"
+echo
