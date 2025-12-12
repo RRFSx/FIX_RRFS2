@@ -30,6 +30,7 @@ cmd="rsync -avr --ignore-existing"
 declare -A mappings  # Declare an associative array
 mappings["Guoqing.Ge"]="Guoqing.Ge"
 mappings["gge"]="Guoqing.Ge"
+mappings["geguo"]="Guoqing.Ge"
 mappings["Samuel.Degelia"]="Samuel.Degelia"
 mappings["sdegelia"]="Samuel.Degelia"
 mappings["Junjun.Hu"]="Junjun.Hu"
