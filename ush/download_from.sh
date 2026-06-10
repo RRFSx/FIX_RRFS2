@@ -35,6 +35,8 @@ mappings["Samuel.Degelia"]="Samuel.Degelia"
 mappings["sdegelia"]="Samuel.Degelia"
 mappings["Junjun.Hu"]="Junjun.Hu"
 mappings["jjhu"]="Junjun.Hu"
+mappings["Eric.James"]="Eric.James"
+mappings["ejames"]="Eric.James"
 # the following are backups
 #mappings["Ming.Hu"]="Ming.Hu"
 #mappings["minghu"]="Ming.Hu"
